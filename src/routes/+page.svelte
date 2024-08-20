@@ -8,6 +8,7 @@
 <MainPage />
 <main class="w-11/12 ml-auto mr-auto">
     <GenerationFunctions />
+	
 
 </main>
 
