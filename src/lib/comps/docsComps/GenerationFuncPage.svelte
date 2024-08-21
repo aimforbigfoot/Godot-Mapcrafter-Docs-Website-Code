@@ -1,31 +1,10 @@
 <script>
-	import LongCodeBlock from '../textComps/LongCodeBlock.svelte';
-	import ShortCodeBlock from '../textComps/ShortCodeBlock.svelte';
+	import DocHeaderComp from '../genComps/DocHeaderComp.svelte';
 	import GenerationDocComp from './GenerationDocComp.svelte';
 </script>
 
 <main class="bg-base-100 mb-12">
-	<h1 class="bg-primary mt-12 rounded-t-md font-bold text-4xl pl-2 p-8">
-		Generation Functions <small class="font-light text">- functions to make maps</small>
-	</h1>
-	<div class="bg-secondary rounded-b-lg">
-		<div class="block p-4">
-			<h2 class="text-2xl font-bold m-auto ml-2 mr-2">What do these functions do:</h2>
-			<h2 class="text-xl m-auto ml-2">
-				These functions help set out a base map given a proper <ShortCodeBlock
-					textToShow="HEIGHT"
-				/> and <ShortCodeBlock textToShow="WIDTH" /> sometimes optional parameters can be passed in such
-				as <ShortCodeBlock textToShow="column_thickness" /> or <ShortCodeBlock
-					textToShow="boxWidth"
-				/> for various extra functions in base map generation.
-			</h2>
-		</div>
-		<div class="block p-4">
-			<h2 class="text-2xl font-bold m-auto ml-2 mr-2">When do you use these functions?</h2>
-			<h2 class="text-xl m-auto ml-2">Whenever you start the process of making a map</h2>
-		</div>
-	</div>
-
+	<DocHeaderComp docCompName="Map Generation Functions" miniDocText="functions to make 2D Arrays" />
 	<GenerationDocComp
 		titleOfFunction="Generate Blank Map"
 		functionDescprition="This function generates a 2D array given the HEIGHT and WEIGHT passed in"
@@ -39,7 +18,7 @@
 		functionAltText="A series of blank maps being generated"
 	/>
 
-	<GenerationDocComp 
+	<GenerationDocComp
 		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/145fd5ce56556999c99f8ec8ce18be069fef7d12/gifs/generateRandomMap.gif"
 		titleOfFunction="Generate Random Map"
 		functionDescprition="This function generates a 2D array given the HEIGHT and WEIGHT passed in, while adding random tiles"
@@ -176,7 +155,11 @@
 				variableName: 'initial_chance',
 				variableDescription: 'The initial chance of the wall to be set'
 			},
-			{ variableName: 'iterations', variableDescription: 'The number of iterations of the cellular automoata algorithim (conway\'s game of life)' }
+			{
+				variableName: 'iterations',
+				variableDescription:
+					"The number of iterations of the cellular automoata algorithim (conway's game of life)"
+			}
 		]}
 	/>
 </main>
