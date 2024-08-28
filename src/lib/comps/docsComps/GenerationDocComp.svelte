@@ -23,15 +23,18 @@
 		<ul class="list-disc pt-2">
 			{#each descriptionOfVariables as { variableName, variableDescription }}
 				<li class="ml-14 py-1 flex">
-					<p class="mr-1"><ShortCodeBlock textToShow={variableName} /></p> <p class="my-auto">: {variableDescription} </p> 
+					<p class="mr-1"><ShortCodeBlock textToShow={variableName} /></p>
+					<p class="my-auto">: {variableDescription}</p>
 				</li>
 			{/each}
 		</ul>
 	</li>
 
-	<li class="list-disc">
-		Example GIF:
-		<img class="w-1/2 ml-auto mr-auto" alt={functionAltText} src={functionGIFLink} />
-		<p class="text-center pt-3 font-light">{functionAltText}</p>
-	</li>
+	{#if functionGIFLink}
+		<li class="list-disc">
+			Example GIF:
+			<img class="w-1/2 ml-auto mr-auto" alt={functionAltText} src={functionGIFLink} />
+			<p class="text-center pt-3 font-light">{functionAltText}</p>
+		</li>
+	{/if}
 </div>

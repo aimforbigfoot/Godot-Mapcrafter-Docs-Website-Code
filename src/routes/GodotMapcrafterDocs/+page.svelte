@@ -4,7 +4,7 @@
 	import GenerationFuncPage from './../../lib/comps/docsComps/GenerationFuncPage.svelte';
 </script>
 
-<main class="w-11/12 ml-auto mr-auto">
+<main class="max-w-6xl ml-auto mr-auto">
 	<FrontPageOfGodotDocs />
 	<GenerationFuncPage />
 </main>
