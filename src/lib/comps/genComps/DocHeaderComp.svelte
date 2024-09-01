@@ -18,7 +18,7 @@
 		</div>
 		<div class="block p-4">
 			<h2 class="text-2xl font-bold m-auto ml-2 mr-2">When do you use these functions?</h2>
-			<h2 class="text-xl m-auto ml-2">Almost all the time</h2>
+			<h2 class="text-xl m-auto ml-2">Almost all the time	</h2>
 		</div>
 	</div>
 {:else if docCompName === 'Map Generation Functions'}
