@@ -43,8 +43,6 @@
 				variableDescription: 'An array of possible tile types.'
 			}
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/getRandomTileType.gif"
-		functionAltText="Selecting a random tile type from a list."
 	/>
 
 	<GenerationDocComp
@@ -337,7 +335,7 @@
 
 	<GenerationDocComp
 		titleOfFunction="Apply Radial Symmetry"
-		functionDescprition="This function applies radial symmetry to a 2D map, reflecting tiles across both axes."
+		functionDescprition="This function applies radial symmetry to a 2D map, reflecting tiles across both axes. (Working on adding a boolean to select bottom left, top or bottom right, at the moment it is only top left)"
 		functionItself="applyRadialSymmetry(map: Array) -> Array"
 		descriptionOfVariables={[
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
@@ -496,6 +494,141 @@
 		functionAltText="A map undergoing erosion."
 	/>
 
+	<GenerationDocComp
+		titleOfFunction="Apply Specific Tile to a Random Set of Tiles"
+		functionDescprition="This function randomly selects a set of tiles on the map and applies a specific tile type to them."
+		functionItself="applySpecificTileToARandomSetOfTiles(tileToApply: int, count: int, map: Array) -> Array"
+		descriptionOfVariables={[
+			{ variableName: 'tileToApply', variableDescription: 'The tile type to apply.' },
+			{
+				variableName: 'count',
+				variableDescription: 'The number of tiles to apply the tile type to.'
+			},
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/applySpecificTileToARandomSetOfTiles.gif"
+		functionAltText="Applying a specific tile to a random set of tiles on the map."
+	/>
+
+	<GenerationDocComp
+		titleOfFunction="Apply Expanded Tiles"
+		functionDescprition="This function expands a given tile type by a specified range in all directions."
+		functionItself="applyExpandedTiles(tileToExpand: int, range: int, map: Array) -> Array"
+		descriptionOfVariables={[
+			{ variableName: 'tileToExpand', variableDescription: 'The tile type to expand.' },
+			{ variableName: 'range', variableDescription: 'The range by which to expand the tile type.' },
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/applyExpandedTiles.gif"
+		functionAltText="Expanding tiles on a map."
+	/>
+
+	<GenerationDocComp
+		titleOfFunction="Apply Conway's Game of Life"
+		functionDescprition="This function applies Conway's Game of Life rules to the map, simulating cellular automata evolution."
+		functionItself="applyConwaysGameOfLife(map: Array, aliveTile: int, deadTile: int, generations: int) -> Array"
+		descriptionOfVariables={[
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' },
+			{ variableName: 'aliveTile', variableDescription: 'The tile type representing live cells.' },
+			{ variableName: 'deadTile', variableDescription: 'The tile type representing dead cells.' },
+			{ variableName: 'generations', variableDescription: 'The number of generations to simulate.' }
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/applyConwaysGameOfLife.gif"
+		functionAltText="Applying Conway's Game of Life rules to a map."
+	/>
+
+	<GenerationDocComp
+		titleOfFunction="Apply Connections to All Sections"
+		functionDescprition="This function connects all sections in the map using the shortest possible path."
+		functionItself="applyConnectionsToAllSections(map: Array, connectionTile: int) -> Array"
+		descriptionOfVariables={[
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' },
+			{
+				variableName: 'connectionTile',
+				variableDescription: 'The tile type to use for connections.'
+			}
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/applyConnectionsToAllSections.gif"
+		functionAltText="Connecting all sections on a map."
+	/>
+
+	<GenerationDocComp
+		titleOfFunction="Apply Connection to Closest Sections"
+		functionDescprition="This function connects the closest sections in the map using the shortest possible path."
+		functionItself="applyConnectionToClosestSections(map: Array, connectionTile: int) -> Array"
+		descriptionOfVariables={[
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' },
+			{
+				variableName: 'connectionTile',
+				variableDescription: 'The tile type to use for connections.'
+			}
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/applyConnectionToClosestSections.gif"
+		functionAltText="Connecting the closest sections on a map."
+	/>
+
+	<GenerationDocComp
+		titleOfFunction="Apply Linear Connection to Sections"
+		functionDescprition="This function creates linear connections between sections in the map."
+		functionItself="applyLinearConnectionToSections(map: Array, connectionTile: int) -> Array"
+		descriptionOfVariables={[
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' },
+			{
+				variableName: 'connectionTile',
+				variableDescription: 'The tile type to use for connections.'
+			}
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/applyLinearConnectionToSections.gif"
+		functionAltText="Creating linear connections between sections on a map."
+	/>
+
+	<GenerationDocComp
+		titleOfFunction="Apply Connection with Minimum Spanning Tree (MST)"
+		functionDescprition="This function connects all sections using the Minimum Spanning Tree algorithm."
+		functionItself="applyConnectionWithMST(map: Array, connectionTile: int) -> Array"
+		descriptionOfVariables={[
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' },
+			{
+				variableName: 'connectionTile',
+				variableDescription: 'The tile type to use for connections.'
+			}
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/applyConnectionWithMST.gif"
+		functionAltText="Connecting sections using the Minimum Spanning Tree algorithm."
+	/>
+
+	<GenerationDocComp
+		titleOfFunction="Apply Connections with Random Walks"
+		functionDescprition="This function connects sections using random walks, creating more organic paths."
+		functionItself="applyConnectionsWithRandomWalks(map: Array, connectionTile: int, walkCount: int) -> Array"
+		descriptionOfVariables={[
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' },
+			{
+				variableName: 'connectionTile',
+				variableDescription: 'The tile type to use for connections.'
+			},
+			{ variableName: 'walkCount', variableDescription: 'The number of random walks to perform.' }
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/applyConnectionsWithRandomWalks.gif"
+		functionAltText="Connecting sections using random walks on a map."
+	/>
+
+	<GenerationDocComp
+		titleOfFunction="Apply Connections Linearly"
+		functionDescprition="This function connects sections linearly in a specified order."
+		functionItself="applyConnectionsLinearly(map: Array, connectionTile: int, order: Array) -> Array"
+		descriptionOfVariables={[
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' },
+			{
+				variableName: 'connectionTile',
+				variableDescription: 'The tile type to use for connections.'
+			},
+			{ variableName: 'order', variableDescription: 'The order in which to connect the sections.' }
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/applyConnectionsLinearly.gif"
+		functionAltText="Connecting sections linearly on a map."
+	/>
+
 	<!--  								-->
 	<!--  								-->
 	<!--  								-->
@@ -621,8 +754,6 @@
 			},
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/drawSquareEveryNthTiles.gif"
-		functionAltText="Drawing squares at regular intervals on a map."
 	/>
 
 	<GenerationDocComp
@@ -656,8 +787,6 @@
 			},
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/drawToFillInPatches.gif"
-		functionAltText="Filling in patches of a certain size on a map."
 	/>
 
 	<GenerationDocComp
@@ -683,8 +812,6 @@
 			},
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/drawRandomWalks.gif"
-		functionAltText="Performing random walks inside large sections on a map."
 	/>
 
 	<GenerationDocComp
@@ -768,8 +895,6 @@
 		descriptionOfVariables={[
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/getSections.gif"
-		functionAltText="Identifying contiguous sections on a map."
 	/>
 
 	<GenerationDocComp
@@ -780,8 +905,6 @@
 			{ variableName: 'tile_type', variableDescription: 'The tile type to identify sections for.' },
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/getSectionsOfACertainTile.gif"
-		functionAltText="Identifying sections of a specific tile type on a map."
 	/>
 
 	<GenerationDocComp
@@ -792,8 +915,6 @@
 			{ variableName: 'sections', variableDescription: 'An array of sections to choose from.' },
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/getARandomSection.gif"
-		functionAltText="Selecting a random section on a map."
 	/>
 
 	<GenerationDocComp
@@ -807,8 +928,6 @@
 			},
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/getARandomSectionByTile.gif"
-		functionAltText="Selecting a random section of a specific tile type on a map."
 	/>
 
 	<GenerationDocComp
@@ -822,8 +941,6 @@
 			},
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/getLargestSectionOfTileType.gif"
-		functionAltText="Identifying the largest section of a specific tile type on a map."
 	/>
 
 	<GenerationDocComp
@@ -836,8 +953,6 @@
 				variableDescription: 'The section of tiles to find the center for.'
 			}
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/findCenterTileGivenASection.gif"
-		functionAltText="Finding the center tile of a section on a map."
 	/>
 
 	<GenerationDocComp
@@ -851,8 +966,6 @@
 			},
 			{ variableName: 'mapToCheck', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/checkAndConnectIfAllSectionsAreConnected.gif"
-		functionAltText="Checking and connecting sections of a specific tile type on a map."
 	/>
 
 	<GenerationDocComp
@@ -863,8 +976,6 @@
 			{ variableName: 'section1', variableDescription: 'The first section of tiles.' },
 			{ variableName: 'section2', variableDescription: 'The second section of tiles.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/closestPointsBetweenSections.gif"
-		functionAltText="Finding the closest points between two sections on a map."
 	/>
 
 	<GenerationDocComp
@@ -877,8 +988,6 @@
 				variableDescription: 'The section of tiles to calculate the centroid for.'
 			}
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/calculateCentroid.gif"
-		functionAltText="Calculating the centroid of a section on a map."
 	/>
 	<GenerationDocComp
 		titleOfFunction="Total Distance"
@@ -890,8 +999,6 @@
 				variableDescription: 'An array of selected points to calculate the distance between.'
 			}
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/totalDistance.gif"
-		functionAltText="Calculating the total distance between points on a map."
 	/>
 
 	<GenerationDocComp
@@ -904,8 +1011,6 @@
 				variableDescription: 'An array of points to find the smallest enclosing square for.'
 			}
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/findSmallestSquare.gif"
-		functionAltText="Finding the smallest square enclosing a set of points on a map."
 	/>
 	<GenerationDocComp
 		titleOfFunction="Find Most Distant Points"
@@ -918,8 +1023,6 @@
 			},
 			{ variableName: 'numPoints', variableDescription: 'The number of distant points to find.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/findMostDistantPoints.gif"
-		functionAltText="Finding the most distant points in a section on a map."
 	/>
 
 	<GenerationDocComp
@@ -933,8 +1036,6 @@
 				variableDescription: 'An array of wall tiles to calculate the distance to.'
 			}
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/minDistanceToWall.gif"
-		functionAltText="Calculating the minimum distance from a point to a wall on a map."
 	/>
 
 	<GenerationDocComp
@@ -975,8 +1076,6 @@
 			},
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/connectClosestSections.gif"
-		functionAltText="Connecting the closest sections on a map with corridors."
 	/>
 
 	<!--  								-->
@@ -1025,8 +1124,29 @@
 		descriptionOfVariables={[
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/countTiles.gif"
-		functionAltText="Counting tile types on a map."
+	/>
+
+	<GenerationDocComp
+		titleOfFunction="Mark Visited"
+		functionDescprition="This function marks tiles as visited in the map, useful for pathfinding and exploration algorithms."
+		functionItself="markVisited(x: int, y: int, map: Array, visitedTile: int) -> Array"
+		descriptionOfVariables={[
+			{
+				variableName: 'x',
+				variableDescription: 'The x-coordinate of the tile to mark as visited.'
+			},
+			{
+				variableName: 'y',
+				variableDescription: 'The y-coordinate of the tile to mark as visited.'
+			},
+			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' },
+			{
+				variableName: 'visitedTile',
+				variableDescription: 'The tile type used to mark the tile as visited.'
+			}
+		]}
+		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/markVisited.gif"
+		functionAltText="Marking tiles as visited on a map."
 	/>
 
 	<GenerationDocComp
@@ -1037,8 +1157,6 @@
 			{ variableName: 'tileToCheck', variableDescription: 'The tile type to count.' },
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/countSpecificTile.gif"
-		functionAltText="Counting a specific tile type on a map."
 	/>
 
 	<GenerationDocComp
@@ -1052,8 +1170,6 @@
 			},
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/getPercentOfTiles.gif"
-		functionAltText="Calculating the percentage of a specific tile type on a map."
 	/>
 
 	<GenerationDocComp
@@ -1063,8 +1179,6 @@
 		descriptionOfVariables={[
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/getLeastCommonTile.gif"
-		functionAltText="Finding the least common tile type on a map."
 	/>
 
 	<GenerationDocComp
@@ -1080,8 +1194,6 @@
 			{ variableName: 'tile_type', variableDescription: 'The tile type to flood fill.' },
 			{ variableName: 'visited', variableDescription: 'A dictionary to track visited tiles.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/getAllTilesOfSameTypeWithFloodFill.gif"
-		functionAltText="Performing a flood fill on a map to find all tiles of the same type."
 	/>
 
 	<GenerationDocComp
@@ -1097,8 +1209,6 @@
 			},
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/countNeighborsOfCertainCellType.gif"
-		functionAltText="Counting the neighbors of a certain cell type on a map."
 	/>
 
 	<GenerationDocComp
@@ -1112,8 +1222,6 @@
 			},
 			{ variableName: 'map', variableDescription: 'The 2D array representing the map.' }
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/identifyPointsOfInterestOnMapByTileType.gif"
-		functionAltText="Identifying points of interest on a map based on tile type."
 	/>
 
 	<GenerationDocComp

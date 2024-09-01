@@ -12,7 +12,7 @@
 	} = $props();
 </script>
 
-<div class=" m-2 p-4 hover:bg-accent rounded-lg">
+<div class=" m-2 p-4 hover:bg-base-300 rounded-lg bg-base-200">
 	<h3 class="text-2xl font-bold">{titleOfFunction}</h3>
 	<p class="mb-2">
 		{functionDescprition}
