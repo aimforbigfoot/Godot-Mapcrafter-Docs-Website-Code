@@ -1057,8 +1057,6 @@
 				variableDescription: 'The minimum distance the points should be from any wall.'
 			}
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/findMostDistantPointsWithPaddingFromWall.gif"
-		functionAltText="Finding the most distant points in a section while maintaining a distance from walls on a map."
 	/>
 
 	<GenerationDocComp
@@ -1145,8 +1143,6 @@
 				variableDescription: 'The tile type used to mark the tile as visited.'
 			}
 		]}
-		functionGIFLink="https://raw.githubusercontent.com/aimforbigfoot/Godot-Mapcrafter-Assets/main/gifs/markVisited.gif"
-		functionAltText="Marking tiles as visited on a map."
 	/>
 
 	<GenerationDocComp
