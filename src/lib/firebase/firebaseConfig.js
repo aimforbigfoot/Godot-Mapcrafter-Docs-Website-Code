@@ -8,7 +8,7 @@ import { env } from '$env/dynamic/public';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 export const firebaseConfig = {
-	apiKey: env.PUBLIC_API_KEY,
+	apiKey: "AIzaSyD8MH2MbaU9pIgnk1eVBehDVi1LHl3fJaQ",
 	authDomain: 'nad-labs-site-54d1b.firebaseapp.com',
 	projectId: 'nad-labs-site-54d1b',
 	storageBucket: 'nad-labs-site-54d1b.appspot.com',
